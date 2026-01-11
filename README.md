@@ -29,8 +29,6 @@ Desenvolver um mini-projeto front-end com foco em qualidade visual, usabilidade 
 
 ### 🛠️ Tecnologias (visual)
 
-Badges legíveis e compatíveis com GitHub:
-
 - ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
 - ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
 - ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
@@ -109,5 +107,5 @@ MIT — sinta-se à vontade para reutilizar e adaptar.
 ## 👤 Autor
 
 [![autor](https://img.shields.io/badge/Autor-Lu%C3%A3%20Rafael-563D7C?style=flat-square)](mailto:luarvb12@gmail.com)
-[![email](https://img.shields.io/badge/E-mail-luarvb12%40gmail.com-blue?style=flat-square)](mailto:luarvb12@gmail.com)
+[![email](https://img.shields.io/badge/Email-luarvb12%40gmail.com-blue?style=flat-square&logo=gmail&logoColor=white)](mailto:luarvb12@gmail.com)
 [![linkedin](https://img.shields.io/badge/LinkedIn-Lu%C3%A3%20Rafael-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/luã-rafael-1434213a3/)
