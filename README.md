@@ -9,14 +9,20 @@
 
 ---
 
-## 🎯 Objetivo
+├─ index.html # Marcação principal
+├─ style.css # Estilos e tema
+├─ script.js # Lógica da aplicação (buscar/criar/deletar)
+├─ theme.js # Controle do modo tema/escuro (isolado)
+├─ api.json # Dados de exemplo (usado por json-server)
+├─ package.json # Metadados do projeto e scripts
+├─ package-lock.json # Lock de dependências (gerado pelo npm)
+├─ .gitignore # Arquivos/pastas ignorados pelo Git
+├─ README.md # Este arquivo
+├─ ferramentas/ # scripts e utilitários (opcionais)
+└─ assets/
+├─ screenshot-desktop.png
+└─ screenshot-task.png
 
-Desenvolver um mini-projeto front-end com foco em qualidade visual, usabilidade e experiência responsiva. Ideal para demonstrar habilidades em UI, UX e integração com APIs locais para prototipagem.
-
-## 🚀 Destaques
-
-- UX refinada: espaçamento, contrastes e foco acessível.
-- Tema escuro opcional com persistência de preferência.
 - Interações rápidas: criar, buscar e remover tarefas.
 - Estrutura leve e fácil de estender (sem frameworks).
 
@@ -24,6 +30,10 @@ Desenvolver um mini-projeto front-end com foco em qualidade visual, usabilidade 
 
 - HTML5 semântico
 - CSS moderno (variáveis, layout responsivo, sombras sutis)
+- `theme.js`: módulo separado que implementa a alternância do tema escuro e persistência (`localStorage`).
+- `package.json` / `package-lock.json`: dependências e metadados do projeto (úteis para reproducibilidade e scripts locais).
+- `.gitignore`: evita versão de artefatos (ex.: `node_modules/`) no repositório.
+- `assets/`: imagens usadas no README e no projeto (ex.: `screenshot-desktop.png`, `screenshot-task.png`).
 - JavaScript (fetch, manipulação do DOM, persistência local)
 - Boas práticas de UX e responsividade
 
