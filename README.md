@@ -9,7 +9,7 @@
 
 ---
 
-├─ index.html # Marcação principal
+├─ index.html # Marcaçã o principal
 ├─ style.css # Estilos e tema
 ├─ script.js # Lógica da aplicação (buscar/criar/deletar)
 ├─ theme.js # Controle do modo tema/escuro (isolado)
@@ -22,6 +22,12 @@
 └─ assets/
 ├─ screenshot-desktop.png
 └─ screenshot-task.png
+
+Arquivos-chave:
+
+index.html: estrutura da interface.
+style.css: tema, responsividade e estilos visuais.
+script.js: todas as chamadas fetch e manipulação do DOM — não altere sem testar.
 
 - Interações rápidas: criar, buscar e remover tarefas.
 - Estrutura leve e fácil de estender (sem frameworks).
