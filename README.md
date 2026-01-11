@@ -7,28 +7,6 @@
 
 > Uma interface limpa e profissional para gestão simples de tarefas — pronta para demonstração.
 
----
-
-├─ index.html # Marcaçã o principal
-├─ style.css # Estilos e tema
-├─ script.js # Lógica da aplicação (buscar/criar/deletar)
-├─ theme.js # Controle do modo tema/escuro (isolado)
-├─ api.json # Dados de exemplo (usado por json-server)
-├─ package.json # Metadados do projeto e scripts
-├─ package-lock.json # Lock de dependências (gerado pelo npm)
-├─ .gitignore # Arquivos/pastas ignorados pelo Git
-├─ README.md # Este arquivo
-├─ ferramentas/ # scripts e utilitários (opcionais)
-└─ assets/
-├─ screenshot-desktop.png
-└─ screenshot-task.png
-
-Arquivos-chave:
-
-index.html: estrutura da interface.
-style.css: tema, responsividade e estilos visuais.
-script.js: todas as chamadas fetch e manipulação do DOM — não altere sem testar.
-
 - Interações rápidas: criar, buscar e remover tarefas.
 - Estrutura leve e fácil de estender (sem frameworks).
 
@@ -79,15 +57,20 @@ Visão geral dos arquivos e pastas importantes deste repositório:
 
 ```text
 .
-├─ index.html             # Marcaçã o principal
-├─ style.css              # Estilos e tema
-├─ script.js              # Lógica da aplicação (buscar/criar/deletar)
-├─ api.json               # Dados de exemplo (usado por json-server)
-├─ README.md              # Este arquivo
-├─ ferramentas/           # scripts e utilitários (opcionais)
+├─ index.html # Marcaçã o principal
+├─ style.css # Estilos e tema
+├─ script.js # Lógica da aplicação (buscar/criar/deletar)
+├─ theme.js # Controle do modo tema/escuro (isolado)
+├─ api.json # Dados de exemplo (usado por json-server)
+├─ package.json # Metadados do projeto e scripts
+├─ package-lock.json # Lock de dependências (gerado pelo npm)
+├─ .gitignore # Arquivos/pastas ignorados pelo Git
+├─ README.md # Este arquivo
+├─ ferramentas/ # scripts e utilitários (opcionais)
 └─ assets/
-   └─ screenshot-desktop.png
-   └─screenshot-task.png
+├─ screenshot-desktop.png
+└─ screenshot-task.png
+
 ```
 
 Arquivos-chave:
