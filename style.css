@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+:root {
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --muted: #475569;
+  --primary: #0b3d91;
+  --primary-600: #072a63;
+  --accent: #3b82f6;
+  --glass: rgba(255, 255, 255, 0.6);
+  --radius: 12px;
+  --shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  --border: #eef2ff;
+}
+
+/* Dark theme overrides applied when <body> has class "dark" */
+body.dark {
+  --bg: #071025;
+  --card: #0b1220;
+  --muted: #94a3b8;
+  --primary: #2563eb;
+  --primary-600: #1e40af;
+  --accent: #06b6d4;
+  --glass: rgba(255, 255, 255, 0.03);
+  --border: rgba(255, 255, 255, 0.03);
+  color: #e6eef8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, var(--bg), #eef2ff);
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+  padding: 28px 20px;
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(4px);
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.header-row .search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.alterar-tema {
+  margin-left: 12px;
+  display: flex;
+  align-items: center;
+}
+.alterar-tema button {
+  background: transparent;
+  border: 1px solid #e6e9f2;
+  color: inherit;
+  padding: 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.alterar-tema button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+}
+
+header input#busca {
+  width: 100%;
+  max-width: 820px;
+  height: 52px;
+  background: var(--card);
+  border-radius: 999px;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 1px solid #e6e9f2;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
+  transition: box-shadow 0.18s ease, transform 0.12s ease,
+    border-color 0.12s ease;
+}
+header input#busca:focus {
+  outline: none;
+  box-shadow: 0 8px 30px rgba(11, 61, 145, 0.12);
+  border-color: var(--primary-600);
+}
+
+main {
+  padding: 36px 20px;
+}
+#tarefas.container {
+  padding-top: 8px;
+}
+
+#tarefas h2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+#tarefas h2 button {
+  background: linear-gradient(180deg, var(--primary), var(--primary-600));
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 8px 18px rgba(11, 61, 145, 0.12);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+#tarefas h2 button:hover {
+  transform: translateY(-2px);
+}
+
+#tarefas ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+  list-style: none;
+  padding: 0;
+}
+
+#tarefas ul li {
+  background: var(--card);
+  padding: 18px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  min-height: 120px;
+  transition: transform 0.14s ease, box-shadow 0.14s ease;
+  border: 1px solid #f1f5f9;
+}
+#tarefas ul li:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 48px rgba(15, 23, 42, 0.08);
+}
+
+#tarefas ul li h5 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #0b1220;
+  font-weight: 600;
+}
+#tarefas ul li p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.45;
+  flex: 1;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 12px;
+}
+.actions .icon-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  color: var(--muted);
+}
+.actions .icon-btn:hover {
+  background: #f8f9ff;
+  color: var(--primary);
+}
+
+.oculto {
+  display: none !important;
+}
+
+#overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.45);
+  backdrop-filter: blur(4px);
+  z-index: 40;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.18s ease, visibility 0.18s ease;
+}
+#overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal {
+  width: 100%;
+  max-width: 520px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), var(--card));
+  padding: 22px;
+  border-radius: 16px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.98);
+  z-index: 50;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+.modal.active {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal form h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  color: #0f172a;
+}
+.modal form label {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.modal form input,
+.modal form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #eef2ff;
+  background: #fff;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+.modal form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+.modal form input:focus,
+.modal form textarea:focus {
+  outline: none;
+  box-shadow: 0 8px 30px rgba(11, 61, 145, 0.08);
+  border-color: var(--primary-600);
+}
+
+.modal form button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 6px;
+}
+.modal form button:hover {
+  filter: brightness(0.98);
+  transform: translateY(-1px);
+}
+
+@media (min-width: 1000px) {
+  header {
+    padding: 32px 0;
+  }
+  .container {
+    max-width: 1100px;
+  }
+  main {
+    padding: 44px 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  header input#busca {
+    height: 48px;
+    font-size: 15px;
+  }
+  .header-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .alterar-tema {
+    margin-left: 0;
+    margin-top: 10px;
+    justify-content: flex-end;
+  }
+  .modal {
+    padding: 18px;
+    border-radius: 12px;
+  }
+}
