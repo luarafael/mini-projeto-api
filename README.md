@@ -29,13 +29,13 @@ Desenvolver um mini-projeto front-end com foco em qualidade visual, usabilidade 
 
 ### 🛠️ Tecnologias (visual)
 
-<div>
-	<img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/html5.svg" alt="HTML5" width="56" style="margin-right:12px;vertical-align:middle" />
-	<img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/css3.svg" alt="CSS3" width="56" style="margin-right:12px;vertical-align:middle" />
-	<img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/javascript.svg" alt="JavaScript" width="56" style="margin-right:12px;vertical-align:middle" />
-	<img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/node-dot-js.svg" alt="Node.js" width="56" style="margin-right:12px;vertical-align:middle" />
-	<img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/json-dot-vscode.svg" alt="json-server" width="56" style="margin-right:12px;vertical-align:middle" />
-</div>
+Badges legíveis e compatíveis com GitHub:
+
+- ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+- ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+- ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+- ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
+- ![json-server](https://img.shields.io/badge/json--server-333333?style=flat&logo=json&logoColor=white)
 
 ## ⚙️ Como executar localmente
 
@@ -73,6 +73,7 @@ Visão geral dos arquivos e pastas importantes deste repositório:
 ├─ ferramentas/           # scripts e utilitários (opcionais)
 └─ assets/
    └─ screenshot-desktop.png
+   └─screenshot-task.png
 ```
 
 Arquivos-chave:
