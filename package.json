@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "mini-projeto-gt",
   "version": "1.0.0",
   "description": "",
@@ -12,5 +13,17 @@
   "license": "ISC",
   "dependencies": {
     "json-server": "^0.17.4"
+=======
+  "name": "mini-projeto-api",
+  "version": "1.0.0",
+  "description": "API para o Mini Projeto GT",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "json-server": "^0.17.4",
+    "cors": "^2.8.5"
+>>>>>>> 41fe710 (feat: setup json-server for vercel)
   }
 }
