@@ -15,19 +15,24 @@ function fecharModal() {
 }
 
 function buscarTarefas() {
-  fetch("http://localhost:3000/tarefas")
+  fetch("https://mini-projeto-api.vercel.app/tarefas")
     .then((response) => response.json())
     .then((response) => {
       inserirTarefas(response);
     });
 }
-buscarTarefas();
 
 function inserirTarefas(listaDeTarefas) {
   if (listaDeTarefas.length > 0) {
     lista.innerHTML = "";
-    listaDeTarefas.map((tarefa) => {
-      lista.innerHTML += `
+    listaDeTarefas.forEach((tarefa) => {
+      adicionarTarefaVisualmente(tarefa);
+    });
+  }
+}
+
+function adicionarTarefaVisualmente(tarefa) {
+  lista.innerHTML += `
              <li>
                     <h5>${tarefa.titulo}</h5>
                     <p>${tarefa.descricao}</p>
@@ -36,8 +41,6 @@ function inserirTarefas(listaDeTarefas) {
                     </div>
                 </li>
             `;
-    });
-  }
 }
 
 function novaTarefa(event) {
@@ -48,7 +51,7 @@ function novaTarefa(event) {
     descricao: descricao.value,
   };
 
-  fetch("http://localhost:3000/tarefas", {
+  fetch("https://mini-projeto-api.vercel.app/tarefas", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -59,7 +62,7 @@ function novaTarefa(event) {
     .then((response) => {
       console.log(response);
       fecharModal();
-      buscarTarefas();
+      adicionarTarefaVisualmente(response);
       alert("Tarefa criada com sucesso!");
       let form = document.querySelector("#criarTarefa form");
       form.reset();
@@ -70,7 +73,7 @@ function novaTarefa(event) {
 }
 
 function deletarTarefa(id) {
-  fetch(`http://localhost:3000/tarefas/${id}`, {
+  fetch(`https://mini-projeto-api.vercel.app/tarefas/${id}`, {
     method: "DELETE",
   })
     .then((response) => response.json())
