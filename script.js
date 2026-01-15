@@ -15,7 +15,7 @@ function fecharModal() {
 }
 
 function buscarTarefas() {
-  fetch("http://localhost:3000/tarefas")
+  fetch("https://mini-projeto-api.vercel.app/tarefas")
     .then((response) => response.json())
     .then((response) => {
       inserirTarefas(response);
@@ -48,7 +48,7 @@ function novaTarefa(event) {
     descricao: descricao.value,
   };
 
-  fetch("http://localhost:3000/tarefas", {
+  fetch("https://mini-projeto-api.vercel.app/tarefas", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -70,7 +70,7 @@ function novaTarefa(event) {
 }
 
 function deletarTarefa(id) {
-  fetch(`http://localhost:3000/tarefas/${id}`, {
+  fetch(`https://mini-projeto-api.vercel.app/tarefas/${id}`, {
     method: "DELETE",
   })
     .then((response) => response.json())
