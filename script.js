@@ -21,13 +21,18 @@ function buscarTarefas() {
       inserirTarefas(response);
     });
 }
-buscarTarefas();
 
 function inserirTarefas(listaDeTarefas) {
   if (listaDeTarefas.length > 0) {
     lista.innerHTML = "";
-    listaDeTarefas.map((tarefa) => {
-      lista.innerHTML += `
+    listaDeTarefas.forEach((tarefa) => {
+      adicionarTarefaVisualmente(tarefa);
+    });
+  }
+}
+
+function adicionarTarefaVisualmente(tarefa) {
+  lista.innerHTML += `
              <li>
                     <h5>${tarefa.titulo}</h5>
                     <p>${tarefa.descricao}</p>
@@ -36,8 +41,6 @@ function inserirTarefas(listaDeTarefas) {
                     </div>
                 </li>
             `;
-    });
-  }
 }
 
 function novaTarefa(event) {
@@ -59,7 +62,7 @@ function novaTarefa(event) {
     .then((response) => {
       console.log(response);
       fecharModal();
-      buscarTarefas();
+      adicionarTarefaVisualmente(response);
       alert("Tarefa criada com sucesso!");
       let form = document.querySelector("#criarTarefa form");
       form.reset();
