@@ -15,7 +15,9 @@ function fecharModal() {
 }
 
 function buscarTarefas() {
-  fetch("https://mini-projeto-api.vercel.app/tarefas")
+  // Usa URL relativa para funcionar tanto no localhost:3000 quanto na Vercel
+  // No localhost, certifique-se de acessar via http://localhost:3000/
+  fetch("/tarefas")
     .then((response) => response.json())
     .then((response) => {
       inserirTarefas(response);
@@ -51,7 +53,7 @@ function novaTarefa(event) {
     descricao: descricao.value,
   };
 
-  fetch("https://mini-projeto-api.vercel.app/tarefas", {
+  fetch("/tarefas", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -73,7 +75,7 @@ function novaTarefa(event) {
 }
 
 function deletarTarefa(id) {
-  fetch(`https://mini-projeto-api.vercel.app/tarefas/${id}`, {
+  fetch(`/tarefas/${id}`, {
     method: "DELETE",
   })
     .then((response) => response.json())
