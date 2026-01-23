@@ -34,13 +34,13 @@
 Instalação rápida para testar com `json-server`:
 
 ```bash
-# instalar json-server (se ainda não tiver)
+
 npm install -g json-server
 
-# iniciar API local (ex.: api.json)
+
 json-server --watch api.json --port 3000
 
-# abrir index.html no navegador (ou usar Live Server)
+
 ```
 
 > Use `npx serve` ou `Live Server` se preferir um servidor estático rápido.
@@ -81,16 +81,16 @@ Arquivos-chave:
 
 ## 📸 Screenshots
 
-Imagens do projeto (colocadas na pasta `assets`):
+Imagens do projeto (colocadas na pasta `public/assets`):
 
 - **Página inicial (Desktop)**
 
-  ![Screenshot desktop](assets/screenshot-desktop.png)  
+  ![Screenshot desktop](public/assets/screenshot-desktop.png)  
   Descrição: Exibe a página inicial do projeto com o layout principal — cabeçalho, campo de busca e botões de ação.
 
 - **Fluxo — Criar Tarefa (screenshot-task)**
 
-  ![Screenshot criar tarefa](assets/screenshot-task.png)  
+  ![Screenshot criar tarefa](public/assets/screenshot-task.png)  
   Descrição: Mostra a interface de criar uma nova tarefa (modal/form) e a tarefa recém-criada aparecendo na lista.
 
 ## 🤝 Contribuições
