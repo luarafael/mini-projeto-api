@@ -1,8 +1,9 @@
-const titulo = document.getElementById("titulo");
-const descricao = document.getElementById("descricao");
 const lista = document.getElementById("lista");
 const overlay = document.getElementById("overlay");
 const criarTarefa = document.getElementById("criarTarefa");
+
+// Carregar tarefas ao abrir a página
+document.addEventListener("DOMContentLoaded", buscarTarefas);
 
 function abrirModal() {
   overlay.classList.add("active");
@@ -48,6 +49,9 @@ function adicionarTarefaVisualmente(tarefa) {
 function novaTarefa(event) {
   event.preventDefault();
 
+  const titulo = document.getElementById("titulo");
+  const descricao = document.getElementById("descricao");
+
   let tarefa = {
     titulo: titulo.value,
     descricao: descricao.value,
@@ -91,6 +95,7 @@ function deletarTarefa(id) {
 }
 
 function pesquisarTarefa() {
+  const busca = document.getElementById("busca");
   let lis = document.querySelectorAll("ul li");
   if (busca.value.length > 0) {
     lis.forEach((li) => {
