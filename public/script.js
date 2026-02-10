@@ -18,7 +18,7 @@ function fecharModal() {
 function buscarTarefas() {
   // Usa URL relativa para funcionar tanto no localhost:3000 quanto na Vercel
   // No localhost, certifique-se de acessar via http://localhost:3000/
-  fetch("./api.json")
+  fetch("../api.json")
     .then((response) => response.json())
     .then((response) => {
       inserirTarefas(response);
